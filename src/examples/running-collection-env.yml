@@ -1,0 +1,17 @@
+description: >
+  Running a collection file with newman
+usage:
+  version: 2.1
+  orbs:
+    newman: postman/newman@0.0.2
+  workflows:
+    use-my-orb:
+      jobs:
+        newman-collection-run-env-timeout:
+          executor: newman/postman-newman-docker
+          steps:
+            - checkout
+            - newman/newman-run:
+                collection: ./collection.json
+                environment: ./environment1.postman_environment.json
+                timeout: "1000"
