@@ -62,7 +62,7 @@ parameters:
     type: string
     default: ""
   additional-options:
-    description: | 
+    description: |
       Additional options for newman run like --bail, --suppress-exit-code, client certificates and reporters, etc
       References
         https://github.com/postmanlabs/newman#newman-run-collection-file-source-options
